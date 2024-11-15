@@ -10,11 +10,6 @@ pipeline {
                 sh 'pip3 install --user pipenv'
                 sh '/bitnami/jenkins/home/.local/bin/pipenv --rm || exit 0'
                 sh '/bitnami/jenkins/home/.local/bin/pipenv install'
-                echo "build completed successful awesome"
-                
-
-                echo "build completed successful ## this is comment for built success "
-                
                 }
             }
         stage('Test') {
