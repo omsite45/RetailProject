@@ -3,11 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "build completed successful awesome"
-                
-=======
-                echo "build completed successful ## this is comment for built success"
-                
+                echo "build completed successful"
                 }
             }
         stage('Test') {
