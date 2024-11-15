@@ -27,7 +27,7 @@ pipeline {
 
             steps {
 
-                sh 'sshpass-p $LABS_PSW scp-o StrictHostKeyChecking=no-r .$LABS_USR@g02.itversity.com:/home/itv014498/retailproject'
+                sh 'sshpass-p $LABS_PSW scp-o StrictHostKeyChecking=no -r .$LABS_USR@g02.itversity.com:/home/itv014498/retailproject'
                 }
             }
         }
