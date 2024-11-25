@@ -7,18 +7,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                 echo "build completed successful   comment for built success"
-=======
                 echo "build completed successful ## this is comment for built success"
                 
->>>>>>> 2476c89a212a448da58ed3fabc1ca335a819c01e
-=======
+                echo "build completed successful ## this is comment for built success"
+                
                 sh 'pip3 install --user pipenv'
                 sh '/bitnami/jenkins/home/.local/bin/pipenv --rm || exit 0'
                 sh '/bitnami/jenkins/home/.local/bin/pipenv install'
->>>>>>> d9c238a9fdf3d128fb67796ad0de249580d466f7
                 }
             }
         stage('Test') {
