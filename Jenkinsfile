@@ -10,12 +10,24 @@ pipeline {
     stages {
         stage('Setup Virtual Environment') {
             steps {
+<<<<<<< HEAD
                 script {
                     // Create a virtual environment with the project name (Retail pipeline)
                     sh 'python3 -m venv retail_pipeline_venv'
                     // Upgrade pip and install pipenv in the virtual environment
                     sh './retail_pipeline_venv/bin/pip install --upgrade pip'
                     sh './retail_pipeline_venv/bin/pip install pipenv'
+=======
+
+                echo "build completed successful   comment for built success"
+                echo "build completed successful ## this is comment for built success"
+                
+                echo "build completed successful ## this is comment for built success"
+                
+                sh 'pip3 install --user pipenv'
+                sh '/bitnami/jenkins/home/.local/bin/pipenv --rm || exit 0'
+                sh '/bitnami/jenkins/home/.local/bin/pipenv install'
+>>>>>>> 0684ea1c72025e26f178df3736695ca1f3e6c22c
                 }
             }
         }
