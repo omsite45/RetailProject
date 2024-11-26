@@ -11,7 +11,7 @@ pipeline {
         stage('Setup Virtual Environment') {
             steps {
                 script {
-                    // Create a virtual environment with the project name (Retail pipeline)
+                    // Create a virtual1 environment with the project name (Retail pipeline)
                     sh 'python3 -m venv retail_pipeline_venv'
                     // Upgrade pip and install pipenv in the virtual environment
                     sh './retail_pipeline_venv/bin/pip install --upgrade pip'
