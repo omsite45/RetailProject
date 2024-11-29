@@ -11,9 +11,9 @@ pipeline {
         stage('Setup Virtual Environment') {
             steps {
                 script {
-                    // Create a virtual environment with the project name (Retail pipeline)
+                    // Create a virtual1 env with the project name (Retail pipeline)
                     sh 'python3 -m venv retail_pipeline_venv'
-                    // Upgrade pip and install pipenv in the virtual environment
+                    // Upgrade pip and install pipenvi in the virtual environment
                     sh './retail_pipeline_venv/bin/pip install --upgrade pip'
                     sh './retail_pipeline_venv/bin/pip install pipenv'
 
@@ -31,7 +31,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    // Install your project dependencies (e.g., requirements.txt or Pipfile)
+                    // Install your project dependencies (e.g, requirements.txt or Pipfile)
                     sh './retail_pipeline_venv/bin/pipenv install'
                 }
             }
@@ -58,7 +58,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 // Add deployment add steps here (e.g., deploy to a server or cloud)
-                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject2'
+                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject/'
             }  
         }
     }
