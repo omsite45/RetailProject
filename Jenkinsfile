@@ -13,7 +13,7 @@ pipeline {
                 script {
                     // Create a virtual1 env with the project name (Retail pipeline)
                     sh 'python3 -m venv retail_pipeline_venv'
-                    // Upgrade pip and install pipenv in the virtual environment
+                    // Upgrade pip and install pipenvi in the virtual environment
                     sh './retail_pipeline_venv/bin/pip install --upgrade pip'
                     sh './retail_pipeline_venv/bin/pip install pipenv'
 
