@@ -31,7 +31,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 script {
-                    // Install your project dependencies (e.g, requirements.txt or Pipfile)
+                    // Install your projects dependencies (e.g, requirements.txt or Pipfile)
                     sh './retail_pipeline_venv/bin/pipenv install'
                 }
             }
