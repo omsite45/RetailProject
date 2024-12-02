@@ -56,7 +56,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                // Add deployment add steps here (e.g.see this new, deploy to a server or cloud)
+                // Add deployment add steps here (e.g.see , deploy to a server or cloud)
                 sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject/'
             }  
         }
