@@ -110,7 +110,8 @@ pipeline {
             }  
 =======
                 // Add deployment steps here (e.g., deploy to a server or cloud)
-                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject'
+                //new file added
+                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject1'
             }
 >>>>>>> ec472cffab1ce1e561fe2d475a277c7ee7152477
         }
