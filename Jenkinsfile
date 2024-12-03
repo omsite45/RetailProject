@@ -11,27 +11,18 @@ pipeline {
         stage('Setup Virtual Environment') {
             steps {
                 script {
-                    // Create a virtual1 env with the project name (Retail pipeline)
+                    // Create a virtual environment with the project name (Retail pipeline)
                     sh 'python3 -m venv retail_pipeline_venv'
-                    // Upgrade pip and install pipenvi in the virtual environment
+                    // Upgrade pip and install pipenv in the virtual environment
                     sh './retail_pipeline_venv/bin/pip install --upgrade pip'
                     sh './retail_pipeline_venv/bin/pip install pipenv'
-
-                echo "build completed successful   comment for built success"
-                echo "build completed successful ## this is comment for built success"
-                
-                echo "build completed successful ## this is comment for built success"
-                
-                sh 'pip3 install --user pipenv'
-                sh '/bitnami/jenkins/home/.local/bin/pipenv --rm || exit 0'
-                sh '/bitnami/jenkins/home/.local/bin/pipenv install'
                 }
             }
         }
         stage('Install Dependencies') {
             steps {
                 script {
-                    // Install your projects dependencies (e.g, requirements.txt or Pipfile)
+                    // Install your project dependencies (e.g., requirements.txt or Pipfile)
                     sh './retail_pipeline_venv/bin/pipenv install'
                 }
             }
@@ -50,13 +41,14 @@ pipeline {
         }
         stage('Package') {
             steps {
-                // Create the zip file but exclude the venv directory
+                // Create the zip files but exclude the venv directory
                 sh 'zip -r retailproject.zip . -x "retail_pipeline_venv/*"'
                 sh 'zip -r retailproject1.zip . -x "retail_pipeline_venv/*"'
             }
         }
         stage('Deploy') {
             steps {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 // Add deployment add steps here (e.g., deploy to a a server or cloud)
                 sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject2'
@@ -65,6 +57,11 @@ pipeline {
                 sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject/'
 >>>>>>> cf690bb1236971a862cfc915ea8b03826e757de5
             }  
+=======
+                // Add deployment steps here (e.g., deploy to a server or cloud)
+                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject'
+            }
+>>>>>>> ec472cffab1ce1e561fe2d475a277c7ee7152477
         }
     }
 }
