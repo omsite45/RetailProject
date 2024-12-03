@@ -50,6 +50,7 @@ pipeline {
             steps {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 // Add deployment add steps here (e.g., deploy to a a server or cloud)
                 sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject2'
 =======
@@ -59,6 +60,9 @@ pipeline {
             }  
 =======
                 // Add deployment steps here (e.g., deploy to a server or cloud)
+=======
+                // Add deployment steps here (e.g., deployment to a server or cloud)
+>>>>>>> feature-rp-50002
                 sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject'
             }
 >>>>>>> ec472cffab1ce1e561fe2d475a277c7ee7152477
