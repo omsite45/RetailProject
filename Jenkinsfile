@@ -41,16 +41,27 @@ pipeline {
         }
         stage('Package') {
             steps {
-                // Create the zip files but exclude the venv directory
+                // Create the zip files abut exclude the venv directory
                 sh 'zip -r retailproject.zip . -x "retail_pipeline_venv/*"'
                 sh 'zip -r retailproject1.zip . -x "retail_pipeline_venv/*"'
             }
         }
         stage('Deploy') {
             steps {
+<<<<<<< HEAD
+<<<<<<< HEAD
+                // Add deployment add steps here (e.g., deploy to a a server or cloud)
+                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject2'
+=======
+                // Add deployment add steps here (e.g., deploy to a server or cloud)
+                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject/'
+>>>>>>> cf690bb1236971a862cfc915ea8b03826e757de5
+            }  
+=======
                 // Add deployment steps here (e.g., deploy to a server or cloud)
                 sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject'
             }
+>>>>>>> ec472cffab1ce1e561fe2d475a277c7ee7152477
         }
     }
 }
