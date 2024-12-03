@@ -104,5 +104,3 @@ pipeline {
                 // Add deployment steps here (e.g., deploymented to a server or cloud)
             }
         }
-    }
-}
