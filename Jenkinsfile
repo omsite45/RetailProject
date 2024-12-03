@@ -49,7 +49,7 @@ pipeline {
             steps {
                 // Add deployment steps here (e.g., deployed to a server or cloud)
                 //new file added
-                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject1'
+                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject'
             }
         }
     }
