@@ -51,7 +51,7 @@ pipeline {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-                // Add deployment add steps here (e.g., deploy to a a server or cloud)
+                // Add deployment add steps here (e.g., deployed to a a server or cloud)
                 sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject2'
 =======
                 // Add deployment add steps here (e.g., deploy to a server or cloud)
