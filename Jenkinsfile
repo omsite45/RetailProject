@@ -21,7 +21,7 @@ pipeline {
                 echo "build completed successful   comment for built success"
                 echo "build completed successful ## this is comment for built success"
                 
-                echo "build completed successful ## this is comment for built success"
+                //echo "build completed successful ## this is comment for built success"
                 
                 sh 'pip3 install --user pipenv'
                 sh '/bitnami/jenkins/home/.local/bin/pipenv --rm || exit 0'
@@ -86,10 +86,10 @@ pipeline {
                 sh 'zip -r retailproject.zip . -x "retail_pipeline_venv/*"'
 
                 // Create the zip files abut exclude the venv directory
-                sh 'zip -r retailproject.zip . -x "retail_pipeline_venv/*"'
-                sh 'zip -r retailproject1.zip . -x "retail_pipeline_venv/*"'
+                //sh 'zip -r retailproject.zip . -x "retail_pipeline_venv/*"'
+                //sh 'zip -r retailproject1.zip . -x "retail_pipeline_venv/*"'
 
-                sh 'zip -r retailproject.zip . -x "retail_pipeline_venv/*"'
+                //sh 'zip -r retailproject.zip . -x "retail_pipeline_venv/*"'
             }
         }
         stage('Deploy') {
@@ -98,14 +98,14 @@ pipeline {
                 // Add deployment add steps here (e.g., deploy to a server or cloud)
 
                 // Add deployment add steps here (e.g., deploy to a a server or cloud)
-                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject2'
+                //sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject2'
                 // Add deployment add steps here (e.g., deploy to a server or cloud)
                 sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject/'
             }  
                 // Add deployment steps here (e.g., deploy to a server or cloud)
                 //new file added
                 // Add deployment steps here (e.g., deploymented to a server or cloud)
-                sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject1'
+                //sh 'sshpass -p $LABS_PSW scp -o StrictHostKeyChecking=no -r retailproject.zip $LABS_USR@g02.itversity.com:/home/itv014498/retailproject1'
             }
         }
     }
