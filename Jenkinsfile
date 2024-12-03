@@ -43,7 +43,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    // Ensure JAVA_HOME is set for PySpark to work
+                    // Ensure JAVA_HOME a is set for PySpark to work
                     sh 'echo $JAVA_HOME'
                     sh 'echo $PATH'
                     
